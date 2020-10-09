@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Consulta de clima mx</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body class="text-center">
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+   
+    <style>
+        body {
+          background-image: url('https://wallpapercave.com/wp/Z4CD0Ic.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          
+        }
+    </style>
+
+    <div class="masthead mb-auto">
+        <h1>Buscador de temperaturas actuales en la república mexicana</h1>
+    </div>
+
+    <div class="row" style="background-color:none;">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
+		<label>Ingresa en la caja de texto el nombre de la ciudad</label>
+		<input class="form-control" type="text" placeholder="Ciudad" id="city">
+		</div>
+    </div>
+    </br>
+		<button type="button" class="btn btn-info" id="btnSrch" onclick="Buscar()" style="display:inline">Buscar</button>
+    </br>
+    <div id="weather_report" style="display: none; color:white; text-shadow: 0 0 10px #000000">
+      </br>
+      <h2 id="ciudad">''</h2>
+      <img id="weather_icon">
+      </br>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+          <h2>Mín</h2>
+          <h2 id="temp_min" >a</h3>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+          <h1>Temperatura actual</h1>
+          <h1 id="temp_act" style="color:white; text-shadow:0 0 10px #000000, 0 0 5px #000000">b</h2>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+          <h2>Máx</h2>
+          <h2 id="temp_max" style="color:white; text-shadow:0 0 10px #000000, 0 0 5px #000000">c</h3>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src="apiweathercall.js"></script>
+<script src="dataViewer.js"></script>
